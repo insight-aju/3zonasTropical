@@ -62,7 +62,7 @@ header, main, footer {
 }
 
 header {
-  background: rgba(255,255,255,0.68) !important;
+  background: rgba(255,255,255,0.34) !important;
   border-bottom: 1px solid rgba(40,80,60,0.08) !important;
   backdrop-filter: blur(12px) saturate(140%);
   -webkit-backdrop-filter: blur(12px) saturate(140%);
@@ -70,7 +70,7 @@ header {
 
 .card,
 section.card {
-  background: rgba(255,255,255,0.35) !important;
+  background: rgba(255,255,255,0.10) !important;
   border: 1px solid rgba(30,90,65,0.12) !important;
   box-shadow: var(--shadow) !important;
   backdrop-filter: blur(18px) saturate(155%);
@@ -79,7 +79,7 @@ section.card {
 
 .badge,
 .status {
-  background: rgba(255,255,255,0.35) !important;
+  background: rgba(255,255,255,0.34) !important;
   border: 1px solid rgba(30,90,65,0.10) !important;
   color: #43586d !important;
 }
