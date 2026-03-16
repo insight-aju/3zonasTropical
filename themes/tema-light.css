@@ -3,7 +3,7 @@
 
 :root {
   --bg: #edf3f7;
-  --card: rgba(255,255,255,0.42);
+  --card: rgba(255,255,255,0.35);
   --line: rgba(30,90,65,0.12);
   --txt: #304357;
   --muted: #5f7387;
@@ -176,6 +176,6 @@ button:disabled {
 
   .card,
   section.card {
-    background: rgba(255,255,255,0.56) !important;
+    background: rgba(255,255,255,0.35) !important;
   }
 }
