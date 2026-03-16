@@ -1,117 +1,143 @@
-/* ==========================================================
-   INSIGHT Audio 3 Zonas - Tema Light Remoto
-   Uso recomendado: GitHub Pages
-   Caminho esperado da imagem: ../img/background-light.svg
-   ========================================================== */
+/* INSIGHT / Tropical - tema light remoto
+   Substitua integralmente o arquivo themes/tema-light.css por este conteúdo.
+   Usa a imagem em ../img/background-light.svg
+*/
 
 :root {
-  --bg: #eef3f8;
-  --card: rgba(255, 255, 255, 0.88);
-  --line: rgba(27, 53, 79, 0.16);
-  --txt: #172534;
-  --muted: #5f7286;
-  --ok: #1f8f5f;
-  --warn: #b07a18;
-  --off: #9ba7b4;
-  --danger: #b64848;
-  --btn: #dfe8f1;
-  --btn2: #d2deea;
-  --shadow: 0 14px 36px rgba(25, 46, 68, 0.12);
-  --radius: 18px;
+  --bg: #edf3f7;
+  --card: rgba(255, 255, 255, 0.78);
+  --line: rgba(30, 90, 65, 0.12);
+  --txt: #304357;
+  --muted: #5f7387;
+  --ok: #19a66a;
+  --warn: #d1a12d;
+  --off: #aab6c2;
+  --danger: #b85a5a;
+  --btn: #eef3f7;
+  --btn2: #e4ebf2;
+  --shadow: 0 12px 28px rgba(26, 45, 66, 0.10);
 }
 
-html,
-body {
-  color-scheme: light;
+html, body {
+  min-height: 100%;
 }
 
 body {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.74), rgba(240,246,252,0.88) 28%, rgba(232,240,248,0.95) 100%),
-    url("../img/background-light.svg") center center / cover fixed no-repeat !important;
+  position: relative;
+  background: var(--bg) !important;
   color: var(--txt) !important;
+  overflow-x: hidden;
+}
+
+/* fundo principal */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url('../img/background-light.svg?v=5');
+  background-repeat: no-repeat;
+  background-position: right 20px top 86px;
+  background-size: min(980px, 74vw) auto;
+  opacity: 0.34;
+}
+
+/* brilho suave verde */
+body::after {
+  content: "";
+  position: fixed;
+  right: -160px;
+  bottom: -160px;
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(25,166,106,0.16) 0%, rgba(25,166,106,0.07) 38%, rgba(25,166,106,0) 75%);
+}
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
 }
 
 header {
-  background: rgba(255,255,255,0.76) !important;
-  border-bottom: 1px solid rgba(23, 37, 52, 0.08) !important;
-  box-shadow: 0 8px 24px rgba(27, 53, 79, 0.06);
+  background: rgba(255,255,255,0.74) !important;
+  border-bottom: 1px solid rgba(40, 80, 60, 0.08) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 header h1,
-h2,
-h3,
-strong {
-  color: #132131 !important;
+header .muted,
+body,
+.card,
+.kv,
+.notice,
+.muted,
+.badge,
+.status,
+pre {
+  color: var(--txt) !important;
+}
+
+.notice,
+.muted {
+  color: var(--muted) !important;
 }
 
 .card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(249,252,255,0.88)) !important;
+  background: var(--card) !important;
   border: 1px solid var(--line) !important;
   box-shadow: var(--shadow) !important;
-  backdrop-filter: blur(9px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-.muted,
-.notice,
-.small {
-  color: var(--muted) !important;
+.badge,
+.status {
+  background: rgba(255,255,255,0.62) !important;
+  border: 1px solid rgba(30, 90, 65, 0.10) !important;
+  color: #43586d !important;
+}
+
+pre {
+  background: rgba(255,255,255,0.60) !important;
+  border: 1px solid rgba(30, 90, 65, 0.10) !important;
+  color: #304357 !important;
 }
 
 button,
 a.btn {
-  background: linear-gradient(180deg, #edf3f8, #dfe8f1) !important;
-  color: #17304b !important;
-  border: 1px solid rgba(23, 48, 75, 0.10) !important;
-  box-shadow: 0 4px 14px rgba(31, 52, 78, 0.08);
+  border: 1px solid rgba(20, 60, 95, 0.08) !important;
+  box-shadow: 0 6px 16px rgba(20, 40, 60, 0.08);
+}
+
+button.primary {
+  background: linear-gradient(180deg, #4f8fc7, #3d78ac) !important;
+  color: #fff !important;
+}
+
+button.success {
+  background: linear-gradient(180deg, #2fa56f, #238d5d) !important;
+  color: #fff !important;
+}
+
+button.danger {
+  background: linear-gradient(180deg, #b85a5a, #934444) !important;
+  color: #fff !important;
 }
 
 button:hover,
 a.btn:hover {
-  background: linear-gradient(180deg, #e4edf5, #d5e1ec) !important;
-}
-
-button.primary {
-  background: linear-gradient(180deg, #5c92c2, #3f79ae) !important;
-  color: #ffffff !important;
-}
-
-button.success {
-  background: linear-gradient(180deg, #2ca06f, #1f875d) !important;
-  color: #ffffff !important;
-}
-
-button.danger {
-  background: linear-gradient(180deg, #c66161, #ab4747) !important;
-  color: #ffffff !important;
-}
-
-button:disabled {
-  opacity: .5;
-}
-
-.status,
-.badge {
-  background: rgba(244, 248, 252, 0.82) !important;
-  border: 1px solid rgba(23, 48, 75, 0.08) !important;
-  color: #1f344b !important;
-}
-
-pre {
-  background: rgba(247, 250, 253, 0.88) !important;
-  border: 1px solid rgba(23, 48, 75, 0.08) !important;
-  color: #16304b !important;
-}
-
-input[type="text"] {
-  background: rgba(255,255,255,0.92) !important;
-  color: #17304b !important;
-  border: 1px solid rgba(23, 48, 75, 0.12) !important;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
+  filter: brightness(1.03);
 }
 
 .dot {
-  box-shadow: 0 0 0 4px rgba(23, 48, 75, 0.06) !important;
+  background: var(--off) !important;
 }
 
 .dot.on {
@@ -122,30 +148,25 @@ input[type="text"] {
   background: var(--warn) !important;
 }
 
-footer {
-  color: var(--muted);
+#logs {
+  font-size: 0.95rem;
 }
 
-/* Leve destaque visual para as zonas */
-.card:nth-of-type(2),
-.card:nth-of-type(3),
-.card:nth-of-type(4) {
-  position: relative;
-  overflow: hidden;
-}
+@media (max-width: 900px) {
+  body::before {
+    background-position: center top 88px;
+    background-size: min(92vw, 430px) auto;
+    opacity: 0.26;
+  }
 
-.card:nth-of-type(2)::before,
-.card:nth-of-type(3)::before,
-.card:nth-of-type(4)::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 4px;
-  background: linear-gradient(180deg, rgba(63,121,174,.75), rgba(31,143,95,.75));
-  border-radius: 18px 0 0 18px;
-}
+  body::after {
+    width: 380px;
+    height: 380px;
+    right: -110px;
+    bottom: -110px;
+  }
 
-/* Página de diagnóstico */
-body:has(#themeUrl) .card {
-  background: rgba(255,255,255,0.92) !important;
+  .card {
+    background: rgba(255,255,255,0.84) !important;
+  }
 }
