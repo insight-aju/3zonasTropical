@@ -1,0 +1,151 @@
+/* ==========================================================
+   INSIGHT Audio 3 Zonas - Tema Light Remoto
+   Uso recomendado: GitHub Pages
+   Caminho esperado da imagem: ../img/background-light.svg
+   ========================================================== */
+
+:root {
+  --bg: #eef3f8;
+  --card: rgba(255, 255, 255, 0.88);
+  --line: rgba(27, 53, 79, 0.16);
+  --txt: #172534;
+  --muted: #5f7286;
+  --ok: #1f8f5f;
+  --warn: #b07a18;
+  --off: #9ba7b4;
+  --danger: #b64848;
+  --btn: #dfe8f1;
+  --btn2: #d2deea;
+  --shadow: 0 14px 36px rgba(25, 46, 68, 0.12);
+  --radius: 18px;
+}
+
+html,
+body {
+  color-scheme: light;
+}
+
+body {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.74), rgba(240,246,252,0.88) 28%, rgba(232,240,248,0.95) 100%),
+    url("../img/background-light.svg") center center / cover fixed no-repeat !important;
+  color: var(--txt) !important;
+}
+
+header {
+  background: rgba(255,255,255,0.76) !important;
+  border-bottom: 1px solid rgba(23, 37, 52, 0.08) !important;
+  box-shadow: 0 8px 24px rgba(27, 53, 79, 0.06);
+}
+
+header h1,
+h2,
+h3,
+strong {
+  color: #132131 !important;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(249,252,255,0.88)) !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: var(--shadow) !important;
+  backdrop-filter: blur(9px);
+}
+
+.muted,
+.notice,
+.small {
+  color: var(--muted) !important;
+}
+
+button,
+a.btn {
+  background: linear-gradient(180deg, #edf3f8, #dfe8f1) !important;
+  color: #17304b !important;
+  border: 1px solid rgba(23, 48, 75, 0.10) !important;
+  box-shadow: 0 4px 14px rgba(31, 52, 78, 0.08);
+}
+
+button:hover,
+a.btn:hover {
+  background: linear-gradient(180deg, #e4edf5, #d5e1ec) !important;
+}
+
+button.primary {
+  background: linear-gradient(180deg, #5c92c2, #3f79ae) !important;
+  color: #ffffff !important;
+}
+
+button.success {
+  background: linear-gradient(180deg, #2ca06f, #1f875d) !important;
+  color: #ffffff !important;
+}
+
+button.danger {
+  background: linear-gradient(180deg, #c66161, #ab4747) !important;
+  color: #ffffff !important;
+}
+
+button:disabled {
+  opacity: .5;
+}
+
+.status,
+.badge {
+  background: rgba(244, 248, 252, 0.82) !important;
+  border: 1px solid rgba(23, 48, 75, 0.08) !important;
+  color: #1f344b !important;
+}
+
+pre {
+  background: rgba(247, 250, 253, 0.88) !important;
+  border: 1px solid rgba(23, 48, 75, 0.08) !important;
+  color: #16304b !important;
+}
+
+input[type="text"] {
+  background: rgba(255,255,255,0.92) !important;
+  color: #17304b !important;
+  border: 1px solid rgba(23, 48, 75, 0.12) !important;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.dot {
+  box-shadow: 0 0 0 4px rgba(23, 48, 75, 0.06) !important;
+}
+
+.dot.on {
+  background: var(--ok) !important;
+}
+
+.dot.warn {
+  background: var(--warn) !important;
+}
+
+footer {
+  color: var(--muted);
+}
+
+/* Leve destaque visual para as zonas */
+.card:nth-of-type(2),
+.card:nth-of-type(3),
+.card:nth-of-type(4) {
+  position: relative;
+  overflow: hidden;
+}
+
+.card:nth-of-type(2)::before,
+.card:nth-of-type(3)::before,
+.card:nth-of-type(4)::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, rgba(63,121,174,.75), rgba(31,143,95,.75));
+  border-radius: 18px 0 0 18px;
+}
+
+/* Página de diagnóstico */
+body:has(#themeUrl) .card {
+  background: rgba(255,255,255,0.92) !important;
+}

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Fundo claro tecnológico INSIGHT">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7fbff"/>
+      <stop offset="45%" stop-color="#ebf3fa"/>
+      <stop offset="100%" stop-color="#dce9f5"/>
+    </linearGradient>
+    <linearGradient id="lineA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7ea7ca" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7ea7ca" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7ea7ca" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lineB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8bc2d2" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#8bc2d2" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#8bc2d2" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur20"><feGaussianBlur stdDeviation="20"/></filter>
+    <filter id="blur40"><feGaussianBlur stdDeviation="40"/></filter>
+    <pattern id="microgrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#9bb7cf" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#microgrid)" opacity="0.55"/>
+
+  <g opacity="0.65">
+    <path d="M0 170C240 200 340 130 520 150s250 90 420 90 250-60 420-55 260 85 560 35" fill="none" stroke="url(#lineA)" stroke-width="3"/>
+    <path d="M0 830C270 760 340 890 570 860s250-110 420-85 250 125 450 115 270-105 480-65" fill="none" stroke="url(#lineA)" stroke-width="3"/>
+    <path d="M260 0C250 220 360 290 350 470s-110 210-100 360 100 160 80 250" fill="none" stroke="url(#lineB)" stroke-width="3"/>
+    <path d="M1410 0C1420 240 1300 290 1320 470s115 210 102 360 30 145 50 250" fill="none" stroke="url(#lineB)" stroke-width="3"/>
+  </g>
+
+  <g opacity="0.9">
+    <circle cx="345" cy="320" r="5" fill="#4c82b0"/>
+    <circle cx="345" cy="320" r="24" fill="url(#glow1)"/>
+    <circle cx="760" cy="220" r="4.5" fill="#56a595"/>
+    <circle cx="760" cy="220" r="20" fill="url(#glow1)"/>
+    <circle cx="1180" cy="520" r="5" fill="#4c82b0"/>
+    <circle cx="1180" cy="520" r="26" fill="url(#glow1)"/>
+    <circle cx="1515" cy="310" r="4.5" fill="#56a595"/>
+    <circle cx="1515" cy="310" r="20" fill="url(#glow1)"/>
+    <circle cx="980" cy="825" r="5" fill="#4c82b0"/>
+    <circle cx="980" cy="825" r="28" fill="url(#glow1)"/>
+    <circle cx="510" cy="775" r="4.5" fill="#56a595"/>
+    <circle cx="510" cy="775" r="20" fill="url(#glow1)"/>
+  </g>
+
+  <g fill="none" stroke="#89a8c4" stroke-opacity="0.25">
+    <path d="M325 320h150l75-90h160" stroke-width="2"/>
+    <path d="M760 220h160l110 140h150" stroke-width="2"/>
+    <path d="M1180 520h140l110-120h90" stroke-width="2"/>
+    <path d="M510 775h160l120 50h190" stroke-width="2"/>
+    <path d="M980 825h160l120-90h150" stroke-width="2"/>
+  </g>
+
+  <g opacity="0.55">
+    <circle cx="250" cy="200" r="140" fill="#ffffff" filter="url(#blur40)"/>
+    <circle cx="1660" cy="180" r="130" fill="#ffffff" filter="url(#blur40)"/>
+    <circle cx="1530" cy="860" r="170" fill="#ffffff" filter="url(#blur40)"/>
+    <circle cx="570" cy="920" r="130" fill="#ffffff" filter="url(#blur40)"/>
+    <ellipse cx="970" cy="550" rx="350" ry="160" fill="#ffffff" opacity="0.35" filter="url(#blur20)"/>
+  </g>
+
+  <g font-family="Segoe UI, Arial, sans-serif" opacity="0.18">
+    <text x="110" y="980" font-size="58" fill="#315271" letter-spacing="6">INSIGHT • AUDIO • 3 ZONAS</text>
+  </g>
+</svg>
